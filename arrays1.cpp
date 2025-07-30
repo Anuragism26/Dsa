@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-PROGRAM TO FIND SECOND LARGEST ELEMENT IN ARRAY
+//PROGRAM TO FIND SECOND LARGEST ELEMENT IN ARRAY
 int seclarg(int arr[],int n){
     int largest=arr[0];
     int seclarge=INT_MIN;
@@ -18,7 +18,7 @@ int seclarg(int arr[],int n){
     cout << "second largest number is " << seclarge;
 }
 time complexity is big o of n and space complexity is big o of 1.
-PROGRAM TO FIND NO OF UNIQUE ELEMENTS IN AN ARRAY
+//PROGRAM TO FIND NO OF UNIQUE ELEMENTS IN AN ARRAY
 int uniq(int arr[],int n){
     int i=0;
     for(int j=1;j<n;j++){
@@ -31,14 +31,14 @@ int uniq(int arr[],int n){
     return i+1;
 }
 time complexity is big o of n and space complexity is big o of 1.
-ROTATION OF AN ARRAY
+//ROTATION OF AN ARRAY
 void rotate(int arr[],int n,int d){
     reverse(arr,arr+n);
     reverse(arr,arr+d);
     reverse(arr+d,arr+n);//the upper limit is not included 
 }
 time complexity is big o of n and space complexity is big o of 1
-MOVED ALL OF THE ZEROES TO THE END
+//MOVED ALL OF THE ZEROES TO THE END
 void shift(int arr[],int n){
     int j=-1;
     for(int i=0;i<n;i++){
@@ -57,7 +57,7 @@ void shift(int arr[],int n){
     }
 }
 time complexity is big o of n and space complexity is big o of 1
-UNION OF TWO ARRAYS
+//UNION OF TWO ARRAYS
 vector<int> unify(vector<int> arr1, vector<int> arr2, int n1, int n2) {
     int i = 0, j = 0;
     vector<int> unionarr;
@@ -92,12 +92,12 @@ vector<int> unify(vector<int> arr1, vector<int> arr2, int n1, int n2) {
 
     return unionarr;
 }
-Final Time Complexity:
-- O(n1 + n2) — linear in the total size of the input arrays
-Space Complexity:
-- New vector to store the union: up to n1 + n2 in the worst case (no overlap)
-- So: O(n1 + n2)
-INTERSECTION OF TWO ARRAYS 
+// Final Time Complexity:
+// - O(n1 + n2) — linear in the total size of the input arrays
+// Space Complexity:
+// - New vector to store the union: up to n1 + n2 in the worst case (no overlap)
+// - So: O(n1 + n2)
+// INTERSECTION OF TWO ARRAYS 
 vector<int> inter(vector<int> a, vector<int> b, int n1, int n2){
     int i=0;
     int j=0;
@@ -117,10 +117,10 @@ vector<int> inter(vector<int> a, vector<int> b, int n1, int n2){
     }
     return interarr;
 }
-Time Complexity:
-- O(n1 + n2)
-Space Complexity:
-- O(min(n1, n2))
+// Time Complexity:
+// - O(n1 + n2)
+// Space Complexity:
+// - O(min(n1, n2))
  int main() {
     vector<int> a = {2,3,3,5,6,6,7};
     vector<int> b = {1,2,2,3,3,4,5,6};
