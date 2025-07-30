@@ -23,7 +23,7 @@ int seclarg(int arr[],int n){
     }
     cout << "second largest number is " << seclarge;
 }
-time complexity is big o of n and space complexity is big o of 1.
+//time complexity is big o of n and space complexity is big o of 1.
             seclarge=largest;
             largest=arr[i];
         }else if(arr[i]<largest){
