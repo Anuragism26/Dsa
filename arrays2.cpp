@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-FIND THE MISSING NUMBER IN THE ARRAY
+//FIND THE MISSING NUMBER IN THE ARRAY
 int missnum(vector <int> a,int n){
     int xor2=0;
     int xor1=0;
@@ -11,7 +11,7 @@ int missnum(vector <int> a,int n){
     xor2=xor2^n;
     return xor1^xor2;
 }
-FIND THE HIGHEST CONTINUOUS ELEMENT
+//FIND THE HIGHEST CONTINUOUS ELEMENT
 int maxc(vector <int> a){
     int maxi=0;
     int ctr=0;
