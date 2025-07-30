@@ -17,7 +17,7 @@ void selection(int arr[],int n){
         cout << arr[i] << " ";
     }
 }
-//bubble sort
+// bubble sort
 void bubble(int arr[],int n){
     for(int i=n-1;i>=1;i--){
         for(int j=0;j<i;j++){
@@ -29,7 +29,7 @@ void bubble(int arr[],int n){
 
 }
 
-//insertion sort
+// insertion sort
 void insertion(int arr[],int n){
     for(int i=1;i<=n-1;i++){
         int j=i;
@@ -40,7 +40,7 @@ void insertion(int arr[],int n){
         }
     }
 }
-//merge sort
+// merge sort
 void merger(int arr[], int low, int high, int mid) {
     vector<int> temp;
     int left = low, right = mid + 1;
@@ -55,7 +55,7 @@ void merger(int arr[], int low, int high, int mid) {
         }
     }
 
-//     // Copy remaining elements (if any)
+    // Copy remaining elements (if any)
     while (left <= mid) temp.push_back(arr[left++]);
     while (right <= high) temp.push_back(arr[right++]);
 
@@ -89,6 +89,7 @@ int fun(int arr[],int low,int high){
     swap(arr[low],arr[j]);
     return j;
 }
+// quick sort
 void qs(int arr[],int low,int high){
     if(low<high){
         int part=fun(arr,low,high);
@@ -105,9 +106,9 @@ int main() {
         cout << arr[i] << " ";
     cout << endl;
 }
-//best time complexity for bubble sort is big o of n but worst is big o of n squared.
-//best time complexity for insertion sort is big o of n but worst is big o of n squared i.e. similar to bubble sort.
-//best time complexity for merge sort is big o of (n log n) and for quick sort is same as that and spaccce complexity is  big o of 1.
+// best time complexity for bubble sort is big o of n but worst is big o of n squared.
+// best time complexity for insertion sort is big o of n but worst is big o of n squared i.e. similar to bubble sort.
+// best time complexity for merge sort is big o of (n log n) and for quick sort is same as that and spaccce complexity is  big o of 1.
 // int n = sizeof(arr) / sizeof(arr[0]); we can use this method if we want to know the size of a prefed array
 int main(){
     int arr[]={9,8,7,6};

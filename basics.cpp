@@ -24,7 +24,7 @@ int main() {
     cout << reverse(x) << endl;
     return 0;
 }
-// printing all the divisors
+printing all the divisors
 int divisors(int n){
     vector <int> ls;
     for( int i=1;i<=sqrt(n);i++){
@@ -46,4 +46,4 @@ int main(){
     cin >> n;
     divisors(n);
 // }
-// HCF OR GCD
+HCF OR GCD

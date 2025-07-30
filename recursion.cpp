@@ -22,7 +22,7 @@ int backtrack(int num ){
     backtrack(num+1);
     cout << num << endl;
 }
-reversing an array 
+// reversing an array 
 
 void reverse(int arr[],int i,int n){
     
@@ -67,8 +67,8 @@ int main(){
     }else{
         cout << "fuckoff";
     }
-
-//fibonacci
+}
+fibonacci
 int fib(int n){
     if(n<=1){
         return n;

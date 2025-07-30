@@ -56,7 +56,7 @@ int main(){
         }
         cout << endl;
 
-    }'
+    }
     char start = char('A'+ 3);
     cout << start;
 }

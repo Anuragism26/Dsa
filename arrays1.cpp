@@ -6,7 +6,24 @@ int seclarg(int arr[],int n){
     int seclarge=INT_MIN;
     for(int i=1;i<n;i++){
         if (arr[i]>largest){
+//PROGRAM TO FIND SECOND LARGEST ELEMENT IN ARRAY
+int seclarg(int arr[],int n){
+    int largest=arr[0];
+    int seclarge=INT_MIN;
+    for(int i=1;i<n;i++){
+        if (arr[i]>largest){
             
+            seclarge=largest;
+            largest=arr[i];
+        }else if(arr[i]<largest){
+            if(arr[i]>seclarge){
+                seclarge=arr[i];
+            }
+        }
+    }
+    cout << "second largest number is " << seclarge;
+}
+time complexity is big o of n and space complexity is big o of 1.
             seclarge=largest;
             largest=arr[i];
         }else if(arr[i]<largest){
@@ -19,6 +36,10 @@ int seclarg(int arr[],int n){
 }
 // time complexity is big o of n and space complexity is big o of 1.
 //PROGRAM TO FIND NO OF UNIQUE ELEMENTS IN AN ARRAY
+int uniq(int arr[],int n){
+    int i=0;
+    for(int j=1;j<n;j++){
+        if(arr[i]!=arr[j]){
 int uniq(int arr[],int n){
     int i=0;
     for(int j=1;j<n;j++){
@@ -75,7 +96,26 @@ vector<int> unify(vector<int> arr1, vector<int> arr2, int n1, int n2) {
             j++;
         }
     }
+    while (i < n1 && j < n2) {
+        if (arr1[i] <= arr2[j]) {
+            if (unionarr.size() == 0 || unionarr.back() != arr1[i]) {
+                unionarr.push_back(arr1[i]);
+            }
+            i++;
+        } else {
+            if (unionarr.size() == 0 || unionarr.back() != arr2[j]) {
+                unionarr.push_back(arr2[j]);
+            }
+            j++;
+        }
+    }
 
+    while (i < n1) {
+        if (unionarr.size() == 0 || unionarr.back() != arr1[i]) {
+            unionarr.push_back(arr1[i]);
+        }
+        i++;
+    }
     while (i < n1) {
         if (unionarr.size() == 0 || unionarr.back() != arr1[i]) {
             unionarr.push_back(arr1[i]);
@@ -89,7 +129,15 @@ vector<int> unify(vector<int> arr1, vector<int> arr2, int n1, int n2) {
         }
         j++;
     }
+    while (j < n2) {
+        if (unionarr.size() == 0 || unionarr.back() != arr2[j]) {
+            unionarr.push_back(arr2[j]);
+        }
+        j++;
+    }
 
+    return unionarr;
+}
     return unionarr;
 }
 // Final Time Complexity:
@@ -138,4 +186,5 @@ vector<int> inter(vector<int> a, vector<int> b, int n1, int n2){
 
     return 0;
 }
-// i am the man
+
+
