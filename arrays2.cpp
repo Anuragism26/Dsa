@@ -34,9 +34,9 @@ int single(vector <int> a){
         xorr= xorr ^ a[i];
 
 
-//     }
-//     return xorr;
-// }
+    }
+    return xorr;
+}
 int main(){
     vector <int> a={1,1,2,3,3,4,4,4,4};
     int result = longestSubarrayWithSumK(a,a.size());

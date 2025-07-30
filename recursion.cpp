@@ -68,7 +68,7 @@ int main(){
         cout << "fuckoff";
     }
 }
-fibonacci
+//fibonacci
 int fib(int n){
     if(n<=1){
         return n;
