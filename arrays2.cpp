@@ -47,6 +47,7 @@ int main(){
 //brute force approach is nested loops
 //better approach is hash maps
 //xor approach is the optimal
+//TO FIND THE LONGEST SUBARRAY ADDING UPTO K
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -75,3 +76,4 @@ int longestSubarrayWithSumK(vector<int> a, long long k) {
 
     return maxLen;
 }
+// the time complexity is big o of n squared.
