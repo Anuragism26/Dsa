@@ -38,11 +38,9 @@ int single(vector <int> a){
     return xorr;
 }
 int main(){
-    vector <int> a={1,1,2,3,3,4,4,4,4};
-    int result = longestSubarrayWithSumK(a,a.size());
-
+    vector <int> a={1,2,3,1,1,1,1,3,3};
+    int result = longestSubarrayWithSumK(a,7);
     cout << result ;
-
 }
 //brute force approach is nested loops
 //better approach is hash maps
@@ -50,8 +48,8 @@ int main(){
 //TO FIND THE LONGEST SUBARRAY ADDING UPTO K
 #include <bits/stdc++.h>
 using namespace std;
-
-int longestSubarrayWithSumK(vector<int> a, long long k) {
+// FIND THE LONGEST CONTINUOUS SUBARRAY THAT ADDS UPTO K
+int longestSubarrayWithSumK(vector<int> a, long long k) { //this method is better overall as it also handles the negative ones 
     map<long long, int> preSumMap;
     long long sum = 0;
     int maxLen = 0;
@@ -76,4 +74,23 @@ int longestSubarrayWithSumK(vector<int> a, long long k) {
 
     return maxLen;
 }
-// the time complexity is big o of n squared.
+// the time complexity is big o of n squared. when using unordered map in worst case scenario and big o of nlogn when using ordered map.
+//the space complexity is big of n.
+//this is the optimal method in case of only positive numbers
+int longestSubarrayWithSumK(vector<int> a, long long k) {
+    long long sum = 0;
+    int maxlen = 0;
+    int j=0;
+    for(int i=0;i<a.size();i++){
+        sum=sum+a[i];
+        if (sum==k){
+            maxlen=max(maxlen,i-j+1);
+        }while(sum>k && j<=i){
+            sum-=a[j];
+            j++;
+        }
+
+    }
+    return maxlen;
+}
+//time complexity is big o of 2N and space complexity is big o of 1
