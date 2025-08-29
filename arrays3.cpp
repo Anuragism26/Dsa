@@ -1,11 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-<<<<<<< HEAD
-//TWO SUM PROBLEM
-=======
 // TWO SUM PROBLEM
->>>>>>> cfadbc8df64f3b1945a91b26c314c4778edd0aca
 string better(vector<int> a, int tar) {
     map<int, int> mpp;
     for (int i = 0; i < a.size(); i++) {
